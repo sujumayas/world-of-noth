@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Noth</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="l-container">
+            <ul class="c-character-list">
+                <template v-for="post in posts">
+                    <li class="c-character-list__item"  @click="showModal(post)">
+                        <img class="c-character-list__image" :src="post.jetpack_featured_media_url" alt="">
+                        <a class="c-character-list__link" :href="post.link">{{ post.title["rendered"] }}</a>
+                    </li>
+                </template>
+            </ul>
+        </div>
+        <pre style="display:none;">
+            {{posts[0]}}
+        </pre>
+        <div class="c-image-modal" v-if="imvisible" @click="{imvisible = false}">
+            <div class="c-image-modal__content">
+                <img class="c-image-modal__image" :src="imurl" alt="">
+                <p class="c-image-modal__paragraph" v-html="imtext">{{imtext}}</p>
+            </div>
+            
+        </div>
+    </div>
+      
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="script.js"></script>
+</body>
+</html>
