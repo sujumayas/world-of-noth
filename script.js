@@ -6,7 +6,7 @@ var app = new Vue({
   data: {
     message: 'Hello Vue!',
     posts: {},
-    imvisible: true,
+    imvisible: false,
     imurl: "https://theworldofnoth.files.wordpress.com/2020/06/default_men.png",
     imtext: "Placeholder text",
   }, 

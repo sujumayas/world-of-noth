@@ -20,6 +20,10 @@
     display: flex;
     flex-direction: column;
     margin: 0;
+    cursor: pointer;
+}
+.c-character-list__item:hover{
+    filter: drop-shadow(1px 1px 4px rgba(15,15,15,0.5));
 }
 .c-character-list__image{
     max-width:100%;
