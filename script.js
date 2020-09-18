@@ -56,8 +56,8 @@ var app = new Vue({
         //console.log(this.posts)
       },
       showModal(post){
-          this.imurl = post.jetpack_featured_media_url
-          this.imtext = post.content["rendered"]
+          this.imurl = post.featured_image
+          this.imtext = post.content
           this.imvisible = true
       }
   }
